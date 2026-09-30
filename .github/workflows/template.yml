@@ -39,15 +39,15 @@ jobs:
 
       # Restore NuGet packages
       - name: Restore Dependencies
-        run: dotnet restore
+        run: dotnet restore tests/Exercises.Tests.csproj
 
       # Build the application
       - name: Build Application
-        run: dotnet build --no-restore
+        run: dotnet build tests/Exercises.Tests.csproj --no-restore
 
       # Run tests
       - name: Run Tests
-        run: dotnet test --no-build --verbosity normal
+        run: dotnet test tests/Exercises.Tests.csproj --no-build --no-restore --verbosity normal
 
 
   # --------------------------------------------------
@@ -67,7 +67,8 @@ jobs:
       - name: Setup .NET
         uses: actions/setup-dotnet@v4
         with:
-          dotnet-version: "8.0.x"
+          dotnet-version: "9.0.x"
 
       - name: Publish Application
-        run: dotnet publish -c Release -o ./publish
+        working-directory: Cloud_Development_Unit_Test_C--main
+        run: dotnet publish src/Exercises.csproj -c Release -o ./publish
