@@ -1,5 +1,6 @@
 using Exercises.Exercise3;
 using Moq;
+using NUnit.Framework;
 
 namespace Exercises.Tests;
 

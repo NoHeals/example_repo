@@ -1,4 +1,5 @@
 using Exercises.Exercise1;
+using NUnit.Framework;
 
 namespace Exercises.Tests;
 
