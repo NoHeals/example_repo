@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <!-- Nullable reference types are switched OFF on purpose. Several exercises are
+         specifically about passing null in and checking the exception, and nullable
+         warnings would only get in the way of someone new to .NET. -->
+    <Nullable>disable</Nullable>
+    <RootNamespace>Exercises</RootNamespace>
+  </PropertyGroup>
+
+</Project>
